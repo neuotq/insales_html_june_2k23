@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insales test</title>
+  </head>
+  <body class="relative">
+    <template id="carouselItemTemplate">
+      <li class="glide__slide glide__slide_carousel container">
+        <div class="carousel__item relative">                   
+        <picture class="carousel__item-img w-full">
+          <source media="(max-width: 1279px)" srcset="carousel_mobile_jpg.jpg" />
+          <source media="(min-width: 1280px)" srcset="carousel_desktop_jpg.jpg" />
+          <img  src="carousel_desktop_jpg.jpg" class="object-contain" alt="Сезон подготовки к новогодним продажам открыт!" />
+        </picture>       
+        <div class="absolute inset-0 z-10">
+        <div class="carousel__content flex flex-col xl:gap-4">
+            <h3 class="carousel__title">Сезон подготовки к новогодним продажам открыт</h3>
+            <div class="carousel__text">
+              <ul>                
+                  <li>Искусственные елки</li>
+                  <li>Гирлянды</li>
+                  <li>Игрушки и украшения</li>
+                  <li>Пиротехника</li>
+                  <li>Новогодние подарки</li>
+              </ul>
+            </div>   
+            <div class="carousel__action">
+              <a href="" class="carousel__action-button">
+                Перейти к каталогу
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </li>
+    </template>
+    <template id="catalogItemTemplate">
+      <li class="glide__slide">
+        <div class="catalog__item pb-4">
+          <div class="catalog__item-imgbox relative mb-2">
+            <picture>
+              <source media="(max-width: 1279px)" srcset="/img/elka_mob.jpg" width="180" height="240" />
+              <source media="(min-width: 1280px)" srcset="/img/elka_deskt.jpg" width="302" height="402" />
+              <img class="catalog__item-img" src="/img/elka_deskt.jpg" alt="Ель комбинированная “Уральская снежная” (ПВХ + РЕ)" />
+            </picture>
+              <span class="catalog__item-status p-1 absolute top-2 left-2  xl:top-4 xl:left-4 xl:hidden">В наличии</span>                  
+              <svg class="catalog__item-bookmark absolute top-2 right-2 xl:top-4 xl:right-4 xl:w-8" width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.8125 0.875C13.145 0.875 11.5445 1.65125 10.5 2.87792C9.45538 1.65125 7.85496 0.875 6.18746 0.875C3.23579 0.875 0.916626 3.19417 0.916626 6.14583C0.916626 9.76833 4.17496 12.72 9.11038 17.205L10.5 18.4604L11.8895 17.1954C16.825 12.72 20.0833 9.76833 20.0833 6.14583C20.0833 3.19417 17.7641 0.875 14.8125 0.875ZM10.5958 15.7771L10.5 15.8729L10.4041 15.7771C5.84246 11.6467 2.83329 8.91542 2.83329 6.14583C2.83329 4.22917 4.27079 2.79167 6.18746 2.79167C7.66329 2.79167 9.10079 3.74042 9.60871 5.05333H11.4008C11.8991 3.74042 13.3366 2.79167 14.8125 2.79167C16.7291 2.79167 18.1666 4.22917 18.1666 6.14583C18.1666 8.91542 15.1575 11.6467 10.5958 15.7771Z" fill="#808080"/>
+            </svg>                  
+          </div>
+          <div class="catalog__item-info px-4">
+            <h5 class="catalog__item-title mb-2 xl:mb-3">Ель комбинированная “Уральская снежная” (ПВХ + РЕ)</h5>
+            <div class="catalog__item-price mb-2">
+              999 999 р.
+            </div>
+            <div class="catalog__item-params pb-3">
+              <div class="catalog__item-params-title">Высота:</div>
+              <div class="catalog__item-params-options flex flex-wrap">
+                <span class="catalog__item-params-options-item">60 см</span>
+                <span class="catalog__item-params-options-item">90 см</span>
+                <span class="catalog__item-params-options-item">120 см</span>
+                <span class="catalog__item-params-options-item">150 см</span>
+                <span class="catalog__item-params-options-item">180 см</span>
+                <span class="catalog__item-params-options-item">210 см</span>
+                <span class="catalog__item-params-options-item catalog__item-params-options-item_active">240 см</span>
+                <span class="catalog__item-params-options-item">270 см</span>
+              </div>
+            </div>
+            <div class="catalog__item-footer xl:flex  xl:justify-between xl:items-center">
+              <div class="catalog__item-price hidden xl:block">
+                999 999 р.
+              </div>
+              <button class="catalog__item-button flex justify-center w-full gap-2 xl:w-auto">
+                <svg class="catalog__item-button-ico" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_301_273)">
+                  <path d="M6.75 16.5C7.16421 16.5 7.5 16.1642 7.5 15.75C7.5 15.3358 7.16421 15 6.75 15C6.33579 15 6 15.3358 6 15.75C6 16.1642 6.33579 16.5 6.75 16.5Z" stroke="#2A5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M15 16.5C15.4142 16.5 15.75 16.1642 15.75 15.75C15.75 15.3358 15.4142 15 15 15C14.5858 15 14.25 15.3358 14.25 15.75C14.25 16.1642 14.5858 16.5 15 16.5Z" fill="#2A5CF6" stroke="#2A5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M0.75 0.75H3.75L5.76 10.7925C5.82858 11.1378 6.01643 11.448 6.29066 11.6687C6.56489 11.8895 6.90802 12.0067 7.26 12H14.55C14.902 12.0067 15.2451 11.8895 15.5193 11.6687C15.7936 11.448 15.9814 11.1378 16.05 10.7925L17.25 4.5H4.5" stroke="#2A5CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_301_273">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+                <span class="hidden xl:inline">В корзину</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </li> 
+    </template>
+    <template id="catalog-item">
+      <li class="wizard"></li>
+    </template>
+    <div id="app">
+      <header class="header">
+        <div class="top-menu hidden xl:block py-2">
+          <div class="container flex mx-auto ">
+            <ul class="menu menu_desktop hidden xl:flex mr-auto list-none  gap-[2.5rem]">
+              <li class="menu__item menu__item_desktop"><a class="menu__item-link text-le" href="#">О нас</a></li>
+              <li class="menu__item menu__item_desktop"><a class="menu__item-link text-le" href="#">Оплата и доставка</a></li>
+              <li class="menu__item menu__item_desktop"><a class="menu__item-link text-le" href="#">Товары из Китая</a></li>
+              <li class="menu__item menu__item_desktop"><a class="menu__item-link text-le" href="#">Статьи</a></li>
+            </ul>
+            
+            <ul class="social social_top flex gap-1">
+              <li class="w-6 h-6 flex justify-center items-center">
+                <a href="#">
+                  <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8 0.561347L9.99677 9.97538C9.99677 9.97538 9.74446 10.6281 9.05136 10.315L4.89077 7.01156L4.87148 7.00182C5.43348 6.47925 9.79146 2.42161 9.98193 2.23768C10.2768 1.95283 10.0937 1.78325 9.75139 1.99843L3.3141 6.23179L0.830607 5.36647C0.830607 5.36647 0.439779 5.22251 0.40218 4.90948C0.364087 4.59593 0.84347 4.42635 0.84347 4.42635L10.9679 0.313381C10.9679 0.313381 11.8 -0.0652298 11.8 0.561347Z" fill="#282828"/>
+                  </svg>
+                </a>
+              </li>
+                <li class="w-6 h-6 flex justify-center items-center">
+                <a href="#">
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.7561 2.23752C9.57073 1.05627 7.99024 0.400024 6.32195 0.400024C2.85366 0.400024 0.0439018 3.20002 0.0439018 6.65627C0.0439018 7.75002 0.351219 8.84377 0.878049 9.76252L0 13L3.33659 12.125C4.25854 12.6063 5.26829 12.8688 6.32195 12.8688C9.79024 12.8688 12.6 10.0688 12.6 6.61252C12.5561 4.99377 11.9415 3.41877 10.7561 2.23752ZM9.35122 8.88752C9.21951 9.23752 8.60488 9.58752 8.29756 9.63127C8.03415 9.67502 7.68293 9.67502 7.33171 9.58753C7.1122 9.50002 6.80488 9.41253 6.45366 9.23752C4.87317 8.58127 3.86342 7.00627 3.77561 6.87502C3.68781 6.78752 3.11707 6.04377 3.11707 5.25627C3.11707 4.46877 3.51219 4.11877 3.6439 3.94377C3.77561 3.76877 3.95122 3.76877 4.08293 3.76877C4.17073 3.76877 4.30244 3.76877 4.39024 3.76877C4.47805 3.76877 4.60976 3.72502 4.74146 4.03127C4.87317 4.33752 5.18049 5.12502 5.22439 5.16877C5.26829 5.25627 5.26829 5.34377 5.22439 5.43127C5.18049 5.51877 5.13658 5.60627 5.04878 5.69377C4.96097 5.78127 4.87317 5.91252 4.82927 5.95627C4.74146 6.04377 4.65366 6.13127 4.74146 6.26252C4.82927 6.43752 5.13659 6.91877 5.61951 7.35627C6.23415 7.88127 6.71707 8.05628 6.89268 8.14378C7.06829 8.23128 7.1561 8.18752 7.2439 8.10002C7.33171 8.01252 7.63903 7.66253 7.72683 7.48753C7.81464 7.31253 7.94634 7.35628 8.07805 7.40002C8.20975 7.44377 9 7.83753 9.13171 7.92503C9.30732 8.01253 9.39512 8.05627 9.43902 8.10002C9.48293 8.23127 9.48293 8.53752 9.35122 8.88752Z" fill="#282828"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-navigation px-6 pt-3 pb-2">
+          <div class="container mx-auto flex flex-col-reverse xl:flex-row xl:gap-6">
+            <div class="py-3 hidden xl:block xl:py-0">
+              <button class="flex catalog-menu-toggle gap-3 text-white font-medium">
+                <span class="sr-only">Каталог</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_17_731)">
+                  <path d="M2.5 15H17.5V13.3333H2.5V15ZM2.5 10.8333H17.5V9.16667H2.5V10.8333ZM2.5 5V6.66667H17.5V5H2.5Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_17_731">
+                  <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+                <span>Каталог</span>
+              </button>              
+            </div>
+            <div class="main-search grow">
+              <form method="post" action="" class="flex main-search__form">
+                <input class="main-search__input grow" type="text" value="" placeholder="Напишите что вы ищите...">
+                <button class="main-search__button">Найти</button>
+              </form>
+            </div>
+            <div class="flex justify-between mb-3 xl:mb-0">
+              <div class="xl:hidden">
+                <button class="menu-toggle">
+                  <span class="sr-only">Меню</span>
+                  <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z" fill="#282828"/>
+                  </svg>
+                </button>
+                <ul class="menu menu_mobile hidden">
+                  <li class="menu__item menu__item_mobile">Гаджеты</li>               
+                </ul>
+              </div>
+              <div class="cabinet-menu flex gap-4">
+                <a href="#" class="cabinet-menu__link cabinet-menu__link_login flex flex-col items-center">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.8">
+                    <path d="M16.6667 15.8333V17.5H3.33337V15.8333C3.33337 14.9493 3.68456 14.1014 4.30968 13.4763C4.93481 12.8512 5.78265 12.5 6.66671 12.5H13.3334C14.2174 12.5 15.0653 12.8512 15.6904 13.4763C16.3155 14.1014 16.6667 14.9493 16.6667 15.8333Z" stroke="#282828" stroke-width="1.43015" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 9.16667C11.841 9.16667 13.3334 7.67428 13.3334 5.83333C13.3334 3.99238 11.841 2.5 10.0001 2.5C8.15913 2.5 6.66675 3.99238 6.66675 5.83333C6.66675 7.67428 8.15913 9.16667 10.0001 9.16667Z" stroke="#282828" stroke-width="1.43015" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </svg>
+                  <span class="hidden xl:block">Войти</span>
+                </a>
+                <a data-items-count="20" href="#" class="cabinet-menu__link flex flex-col items-center">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.8">
+                    <path d="M15.8795 2.84757C16.4357 3.07803 16.9411 3.41583 17.3667 3.84166C17.7926 4.26729 18.1304 4.77265 18.3608 5.32887C18.5913 5.88508 18.7099 6.48126 18.7099 7.08333C18.7099 7.6854 18.5913 8.28158 18.3608 8.83779C18.1304 9.39401 17.7926 9.89937 17.3667 10.325L16.4834 11.2083L10.0001 17.6917L3.51672 11.2083L2.63339 10.325C1.77365 9.46525 1.29065 8.29919 1.29065 7.08333C1.29065 5.86747 1.77365 4.70141 2.63339 3.84166C3.49314 2.98192 4.6592 2.49892 5.87506 2.49892C7.09092 2.49892 8.25698 2.98192 9.11673 3.84166L10.0001 4.725L10.8834 3.84166C11.309 3.41583 11.8144 3.07803 12.3706 2.84757C12.9268 2.6171 13.523 2.49847 14.1251 2.49847C14.7271 2.49847 15.3233 2.6171 15.8795 2.84757Z" stroke="#282828" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </svg>
+                  <span class="hidden xl:block">Избранное</span>
+                </a>
+                <a  data-items-count="15" href="#" class="cabinet-menu__link flex flex-col items-center">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.8" clip-path="url(#clip0_17_786)">
+                    <path d="M7.49984 18.3333C7.96007 18.3333 8.33317 17.9602 8.33317 17.5C8.33317 17.0397 7.96007 16.6666 7.49984 16.6666C7.0396 16.6666 6.6665 17.0397 6.6665 17.5C6.6665 17.9602 7.0396 18.3333 7.49984 18.3333Z" stroke="#282828" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.6666 18.3333C17.1268 18.3333 17.4999 17.9602 17.4999 17.5C17.4999 17.0397 17.1268 16.6666 16.6666 16.6666C16.2063 16.6666 15.8333 17.0397 15.8333 17.5C15.8333 17.9602 16.2063 18.3333 16.6666 18.3333Z" fill="#282828" stroke="#282828" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M0.833374 0.833313H4.16671L6.40004 11.9916C6.47624 12.3753 6.68496 12.7199 6.98966 12.9652C7.29436 13.2105 7.67562 13.3408 8.06671 13.3333H16.1667C16.5578 13.3408 16.9391 13.2105 17.2438 12.9652C17.5484 12.7199 17.7572 12.3753 17.8334 11.9916L19.1667 4.99998H5.00004" stroke="#282828" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_17_786">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                  <span class="hidden xl:block">Корзина</span>
+                </a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="overflow-hidden">
+          <div class="carousel container mx-auto relative" id="carousel">
+            <div class="glide__track container overflow-visible" data-glide-el="track">
+              <ul class="glide__slides">
+              </ul>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+            </div>
+          </div>
+          <div class="overflow-scroll  px-6 xl:px-0  no-scrollbar xl:container xl:mx-auto">
+            <div class="advantages flex gap-3 w-max xl:gap-6 xl:flex-1 xl:w-full">
+              <div class="advantages__item advantages__item_marketplaces relative">
+                <h4 class="advantages__item-title">Идеально для маркетплейсов</h4>
+                <div class="advantages__item-text">Подробные описания, характеристики и фотографии товаров</div>
+                <img 
+                  class="advantages__item-img advantages__item-img_marketplaces absolute xl:hidden" 
+                  loading="lazy" 
+                  src="/img/marketplaces.png" 
+                  alt="Маркетплейсы"
+                  >
+                <img 
+                  class="advantages__item-img advantages__item-img_marketplaces absolute  hidden xl:block" 
+                  loading="lazy" 
+                  src="/img/marketplaces-big.png" 
+                  alt="Маркетплейсы"
+                  >
+              </div>
+              <div class="advantages__item advantages__item_principles relative">
+                <h4 class="advantages__item-title advantages__item-title_principles">Работаем официально</h4>
+                <div class="advantages__item-text">Белая бухгалтерия: договора, закрывающие документы, ЭДО, оплата по счету или на сайте</div>
+                <img class="advantages__item-img advantages__item-img_principles absolute xl:hidden" loading="lazy" src="/img/bank.png" alt="Принципы">
+                <img class="advantages__item-img advantages__item-img_principles absolute hidden xl:block" loading="lazy" src="/img/bank-big.png" alt="Принципы">
+              </div>
+              <div class="advantages__item advantages__item_prices relative">
+                <h4 class="advantages__item-title">Цены от производителей без наценок</h4>
+                <div class="advantages__item-text">Недорогие, но качественные товары + Прогрессирующая система скидок и бонусов</div>
+                <img class="advantages__item-img advantages__item-img_prices absolute xl:hidden" loading="lazy" src="/img/tag.png" alt="Цены">
+                <img class="advantages__item-img advantages__item-img_prices absolute hidden xl:block" loading="lazy" src="/img/tag-big.png" alt="Цены">
+              </div>
+              <div class="advantages__item advantages__item_delivery relative">
+                <h4 class="advantages__item-title">Быстрая обработка заказов.<br/> Доставка в РФ и СНГ</h4>
+                <div class="advantages__item-text">Отгружаем заказ до любой транспортной компании. Отправка в течение 1-3 дней с момента получения оплаты</div>
+                <img class="advantages__item-img advantages__item-img_delivery absolute xl:hidden" loading="lazy" src="/img/truck.png" alt="Доставка">
+                <img class="advantages__item-img advantages__item-img_delivery absolute hidden xl:block" loading="lazy" src="/img/truck-big.png" alt="Доставка">
+              </div>
+              <div class="advantages__item advantages__item_warehouse relative">
+                <h4 class="advantages__item-title">Собственный склад и офис</h4>
+                <div class="advantages__item-text">Будем рады угостить ваш чашечкой кофе в нашем офисе с Екатеринбурге</div>
+                <img class="advantages__item-img advantages__item-img_warehouse absolute xl:hidden" loading="lazy" src="/img/warehouse.png" alt="Доставка">
+                <img class="advantages__item-img advantages__item-img_warehouse absolute hidden xl:block" loading="lazy" src="/img/warehouse-big.png" alt="Доставка">
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 xl:px-0 con ">
+            <div class="catalog__title-box flex gap-2 items-center pb-6 container mx-auto">
+              <h2 class="catalog__title">Каталог</h2>
+              <span class="catalog__delimetr">/</span>
+              <a href="#" class="catalog__link">Все товары</a>
+            </div>
+            <div class="catalog container mx-auto relative" id="catalog">
+              <div class="glide__track container overflow-visible" data-glide-el="track">
+                <ul class="glide__slides container">
+                </ul>
+              </div>
+              <div class="glide__arrows hidden xl:block" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.66665 0L0.31665 2.35L7.94998 10L0.31665 17.65L2.66665 20L12.6666 10L2.66665 0Z" fill="#282828"/>
+                </svg>
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                  <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.66665 0L0.31665 2.35L7.94998 10L0.31665 17.65L2.66665 20L12.6666 10L2.66665 0Z" fill="#282828"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="about flex flex-col-reverse xl:flex-row container mx-auto relative">
+              <div class="about__text">
+                <h2 class="about__text-title hidden xl:block xl:pb-6">О нас</h2>
+                <div class="about__text-content">
+                  Мы надежный поставщик для маркетплейсов. Мы рады предложить вам недорогие, но качественные товары с качественными описаниями и фотографиями. 
+  У нас вы можете купить замечательные товары: искусственные елки, гирлянды, пиротехнику, электронику, одежду, обувь, аксессуары.Минимальная сумма заказа всего 10 000 руб.
+                </div>
+              </div>
+              <div class="about__imgbox">
+                <h2 class="about__text-title xl:hidden mb-3">О нас</h2>
+                <picture class="" >
+                  <source media="(max-width: 1279px)" width="378" height="144" srcset="/img/about_mob.jpg" />
+                  <source media="(min-width: 1280px)" width="582" height="304" srcset="/img/about_deskt.jpg" />
+                  <img  loading="lazy" class="about__img block mb-3" src="about_deskt.jpg" alt="Мы надежный поставщик для маркетплейсов." />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer py-6">
+        <div class="px-6 xl:px-0 ">
+          <div class="container mx-auto flex flex-col-reverse xl:flex-row mb-6">
+            <div class="flex flex-col xl:flex-row xl:gap-6">
+              <div class="footer__menu mb-4">
+                <div  data-footer-menu-id="company" class="footer__menu-title flex">
+                  <span>Компания</span>
+                  <svg class="xl:hidden ml-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_17_837)">
+                    <path d="M16.5894 9.65017L16.9393 10.0001L12 14.9394L7.06066 10.0001L7.41058 9.65017L11.4702 13.701L12 14.2296L12.5298 13.701L16.5894 9.65017Z" fill="#282828" stroke="#282828" stroke-width="1.5"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_17_837">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <ul id="company" class="footer__menu-list pl-3 xl:pl-0">
+                  <li class="footer__menu-list-item">Блог</li>
+                  <li class="footer__menu-list-item">О компании</li>
+                  <li class="footer__menu-list-item">Стать поставщиком</li>
+                  <li class="footer__menu-list-item">Стать инвестором</li>
+                  <li class="footer__menu-list-item">Контакты</li>
+                  <li class="footer__menu-list-item">Пользовательское соглашение</li>
+                  <li class="footer__menu-list-item">Политика конфиденциальности и оферта</li>
+                </ul>
+              </div>
+              <div class="footer__menu">
+                <div data-footer-menu-id="byers" class="footer__menu-title flex">
+                  <span>Покупателям</span>
+                  <svg class="xl:hidden ml-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_17_837)">
+                    <path d="M16.5894 9.65017L16.9393 10.0001L12 14.9394L7.06066 10.0001L7.41058 9.65017L11.4702 13.701L12 14.2296L12.5298 13.701L16.5894 9.65017Z" fill="#282828" stroke="#282828" stroke-width="1.5"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_17_837">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <ul id="byers" class="footer__menu-list pl-3 xl:pl-0">
+                  <li class="footer__menu-list-item">Каталог</li>
+                  <li class="footer__menu-list-item">Корзина</li>
+                  <li class="footer__menu-list-item">Избранные товары</li>
+                  <li class="footer__menu-list-item">Личный кабинет</li>
+                  <li class="footer__menu-list-item">Доставка</li>
+                  <li class="footer__menu-list-item">Оплата</li>
+                  <li class="footer__menu-list-item">Обмен и возврат</li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__social">
+              <form class="footer__form mb-4" action="">
+                <div class="footer__form-title mb-3">Следите за новинками и акциями</div>
+                <div class="footer__form-group flex gap-2 mb-3">
+                  <input type="email" id="footerInput" placeholder="Адрес электронной почты" class="footer__form-input flex-grow">
+                  <button class="footer__form-button">
+                    <span class="sr-only">Отправить</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_824)">
+                      <path d="M8.33333 5L7.15833 6.175L10.975 10L7.15833 13.825L8.33333 15L13.3333 10L8.33333 5Z" fill="#323232"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_17_824">
+                      <rect width="20" height="20" rx="10" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </div>
+                <p class="footer__form-rules">
+                  Нажимая кнопку отправить, я соглашаюсь на получение информации от интернет-магазина и уведомлений о состоянии моих заказов, а также принимаю условия политики конфиденциальности и пользовательского соглашения. даю согласие на обработку персональных данных и на получение рекламных сообщений и новостей о товарах и услугах
+                </p>
+              </form>
+                <div class="footer__contacts flex flex-col gap-4 mb-4">
+                  <a href="#" class="footer__contacts-item footer__contacts-item_phone">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_827)">
+                      <path d="M5.51667 8.99167C6.71667 11.35 8.65 13.275 11.0083 14.4833L12.8417 12.65C13.0667 12.425 13.4 12.35 13.6917 12.45C14.625 12.7583 15.6333 12.925 16.6667 12.925C17.125 12.925 17.5 13.3 17.5 13.7583V16.6667C17.5 17.125 17.125 17.5 16.6667 17.5C8.84167 17.5 2.5 11.1583 2.5 3.33333C2.5 2.875 2.875 2.5 3.33333 2.5H6.25C6.70833 2.5 7.08333 2.875 7.08333 3.33333C7.08333 4.375 7.25 5.375 7.55833 6.30833C7.65 6.6 7.58333 6.925 7.35 7.15833L5.51667 8.99167Z" fill="#282828"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_17_827">
+                      <rect width="20" height="20" rx="10" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                  <a href="#" class="footer__contacts-item footer__contacts-item_email">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_829)">
+                      <path d="M14.1666 2.83325H2.83329C2.05413 2.83325 1.42371 3.47075 1.42371 4.24992L1.41663 12.7499C1.41663 13.5291 2.05413 14.1666 2.83329 14.1666H14.1666C14.9458 14.1666 15.5833 13.5291 15.5833 12.7499V4.24992C15.5833 3.47075 14.9458 2.83325 14.1666 2.83325ZM14.1666 5.66659L8.49996 9.20825L2.83329 5.66659V4.24992L8.49996 7.79159L14.1666 4.24992V5.66659Z" fill="#282828"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_17_829">
+                      <rect width="17" height="17" rx="8.5" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                  <a href="#" class="footer__contacts-item footer__contacts-item_home">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_17_831)">
+                      <path d="M10 2.5L3.33337 7.5V17.5H7.50004V11.6667H12.5V17.5H16.6667V7.5L10 2.5Z" fill="#282828"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_17_831">
+                      <rect width="20" height="20" rx="10" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+                <div class="footer__social-links flex gap-2 mb-4">
+                  <a href="#" class="footer__social-links-item footer__social-links-item_vk flex justify-center items-center">
+                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.9825 14C4.46596 14 0.178638 8.74474 0 0H3.76515C3.88882 6.41842 6.66459 9.13714 8.86321 9.6977V0H12.4085V5.53553C14.5796 5.2973 16.8607 2.77477 17.6302 0H21.1755C20.8855 1.43908 20.3075 2.80165 19.4776 4.0025C18.6477 5.20335 17.5837 6.21663 16.3523 6.97898C17.7269 7.67555 18.941 8.6615 19.9145 9.87175C20.888 11.082 21.5988 12.489 22 14H18.0974C17.7373 12.6876 17.0054 11.5128 15.9934 10.6228C14.9814 9.73284 13.7343 9.16727 12.4085 8.997V14H11.9825Z" fill="#282828"/>
+                    </svg>
+                  </a>
+                  <a href="#" class="footer__social-links-item footer__social-links-item_tg flex justify-center items-center">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z" fill="#282828"/>
+                    </svg>
+                  </a>
+                </div>
+            </div>
+          </div>
+          <div class="footer__bottom xl:py-3">
+            <div class=" flex flex-col-reverse xl:flex-row container mx-auto xl:justify-between xl:items-center">
+              <span class="footer__copyright">© 2022</span>
+              <div class="footer__paymentgates mb-4 xl:mb-0">
+                <img  loading="lazy" src="/img/paymentsgates.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-container hidden xl:block">
+      <a href="#" class="hidden xl:flex back-to-top items-center justify-center">
+        <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.5 16.1666L4.1425 19.8091L16 7.97742L27.8575 19.8091L31.5 16.1666L16 0.666583L0.5 16.1666Z" fill="#282828"/>
+        </svg>
+      </a>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
