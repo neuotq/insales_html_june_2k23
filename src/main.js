@@ -240,7 +240,7 @@ window.addEventListener('load', function () {
     perView: 4 ,
     breakpoints: {
       1279: {
-        perView: 2,
+        perView: 1,
         gap: 12
       }
     }

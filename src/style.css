@@ -244,6 +244,7 @@ body {
 /* Start Catalog */
 
 .catalog {
+  width: 180px;
   &__title {
     font-weight: 500;
     font-size: 1.5rem;
@@ -707,6 +708,7 @@ body {
   }
   .catalog {
     position: relative;
+    width: auto;
 
     /* .glide__slide {
       &:hover {
