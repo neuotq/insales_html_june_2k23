@@ -222,7 +222,7 @@ window.addEventListener('load', function () {
     startAt: 0,
     perView: 1,
     gap: 32,
-    autoplay: 4000,
+    // autoplay: 4000,
     focusAt: 0,
     breakpoints: {
       1279: {        

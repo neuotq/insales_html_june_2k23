@@ -121,16 +121,16 @@ body {
   }
 }
 .carousel {  
-  &__item {
+  &__item {    
     &-img {
-      display: block;
-      height: 176px;
+      object-fit: cover;      
     }
   }
   &__content {
-    margin-top: 24px;
-    margin-left: 27px;
-    width: calc(100% - 2 * 24px);
+    padding-top: 1.5rem;
+    padding-left: 1.9rem;
+    padding-bottom: 1.56rem;
+    width: calc(100% - 2 * 1.5rem);
     ul {
       list-style: disc;
       padding-left: 1rem;
@@ -608,15 +608,14 @@ body {
   }
   .carousel {
     padding-bottom: calc(32px + 12px);
-    &__item {
-      &-img {
-        height: 356px;
-      }
+    &__item {      
+      
     }
     &__content {
-      margin-left: 190px;
-      margin-top: 40px;
-      width: 477px;
+      padding-left: 11.88rem;
+      padding-top: 2.5rem;
+      width: 29.8125rem;
+      box-sizing: content-box;
       padding-bottom: 40px;
       padding-right: 0;
     }
