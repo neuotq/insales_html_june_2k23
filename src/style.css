@@ -130,7 +130,7 @@ body {
   &__content {
     margin-top: 24px;
     margin-left: 27px;
-    padding-right: 83px;
+    width: calc(100% - 2 * 24px);
     ul {
       list-style: disc;
       padding-left: 1rem;
